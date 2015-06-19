@@ -1,3 +1,4 @@
+# coding=utf-8
 __author__ = 'andre'
 
 class List:
@@ -61,6 +62,9 @@ class List:
             print point
             point = point.child
 
+    def __str__(self):
+        return str((self.minH, self.maxH, self.minV, self.maxV))
+
 class Point:
     def __init__(self, position=(-1, -1), child=None):
         self.position = position
@@ -69,6 +73,7 @@ class Point:
     def __str__(self):
         return str(self.position)
 
+# A main é apenas um teste manual, deve ser modificado pra um teste adequado.
 if __name__ == "__main__":
     print "L1"
     l1 = List((1,1))
