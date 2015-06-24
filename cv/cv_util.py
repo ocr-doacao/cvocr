@@ -17,7 +17,6 @@ class CVUtil:
         self.image_color = None
         self.image_gray = None
         self.image_bin = None
-        self.image_bin_bkp = None
         self.height = None
         self.width = None
         self.structs = []
@@ -73,7 +72,6 @@ class CVUtil:
             contador += 1
         if self.verbose:
             for component in self.topology.get_components(self.height_char):
-                print component
                 down_right = (component.maxH, component.maxV)
                 up_left = (component.minH, component.minV)
                 cv2.rectangle(self.image_color, down_right, up_left, (0, 0, 255), 2)
