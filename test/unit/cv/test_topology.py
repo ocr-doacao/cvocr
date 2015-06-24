@@ -25,6 +25,14 @@ class TestSet(unittest.TestCase):
         image[::2, ::2] = 0
         return image
 
+    def assertComponents(self, image, n):
+        topology = Topology()
+        topology.calculate(image)
+        ncomponents = 0
+        for component in topology.get_components():
+            ncomponents += 1
+        self.assertEqual(ncomponents, n)
+
     def assertTopologyLen(self, image, size):
         topology = Topology()
         topology.calculate(image)
@@ -50,22 +58,10 @@ class TestSet(unittest.TestCase):
         self.assertTopologyLen(image, 1)
 
     def test_get_components_empty(self):
-        image = self.max_board()
-        topology = Topology()
-        topology.calculate(image)
-        ncomponents = 0
-        for component in topology.get_components():
-            ncomponents += 1
-        self.assertEqual(ncomponents, 0)
+        self.assertComponents(self.max_board(), 0)
 
     def test_get_components_one(self):
-        image = self.chess_board()
-        topology = Topology()
-        topology.calculate(image)
-        ncomponents = 0
-        for component in topology.get_components():
-            ncomponents += 1
-        self.assertEqual(ncomponents, 1)
+        self.assertComponents(self.chess_board(), 1)
 
     def test_get_components_height(self):
         image = self.chess_board()
