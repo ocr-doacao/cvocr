@@ -2,6 +2,7 @@ __author__ = 'andre'
 
 import cv2
 import numpy as np
+from matplotlib.pyplot import imshow, show
 
 def adaptive_threshold(image_gray, blur=True, verbose=False):
     if verbose:
@@ -67,7 +68,6 @@ def crop(up_left, down_right, image):
     crop = image[up_left[1]:down_right[1], up_left[0]:down_right[0]]
     return cv2.copyMakeBorder(crop, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=[255, 255, 255])
 
-def pop_up(image, title):
-    cv2.namedWindow(title, cv2.WINDOW_NORMAL)
-    cv2.imshow(title, image)
-    cv2.waitKey(0)
+def pop_up(image):
+    imshow(image)
+    show()

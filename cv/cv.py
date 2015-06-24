@@ -74,5 +74,5 @@ class CVUtil:
             for component in self.topology.get_components(self.height_char):
                 down_right = (component.maxH, component.maxV)
                 up_left = (component.minH, component.minV)
-                cv2.rectangle(self.image_color, down_right, up_left, (0, 0, 255), 2)
-            pop_up(self.image_color, "Delimited Image")
+                cv2.rectangle(self.image_color, down_right, up_left, (0, 190, 0), 2)
+            pop_up(self.image_color)

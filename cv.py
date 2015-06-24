@@ -1,6 +1,6 @@
 __author__ = 'andre'
 
-from cv.cv_util import CVUtil
+from cv.cv import CVUtil
 import argparse
 
 def main():
