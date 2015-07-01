@@ -1,6 +1,6 @@
 __author__ = 'andre'
 
-from ocr import call_tesseract
+from ocr.functions import call_tesseract
 from os import listdir
 from os.path import isfile, join, splitext
 import argparse
