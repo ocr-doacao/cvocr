@@ -6,8 +6,8 @@ import numpy as np
 import sys
 import os
 local = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(local, "..", "..", ".."))
-from cv.topology import Topology
+sys.path.insert(0, os.path.join(local, "..", "..", "..", "cv"))
+from topology import Topology
 
 class TestSet(unittest.TestCase):
     SIZE = 100

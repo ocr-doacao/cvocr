@@ -69,5 +69,5 @@ def crop(up_left, down_right, image):
     return cv2.copyMakeBorder(crop, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=[255, 255, 255])
 
 def pop_up(image):
-    imshow(image)
+    imshow(image,)
     show()

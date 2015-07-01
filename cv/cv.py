@@ -56,7 +56,7 @@ class CVUtil:
         self.image_bin = horizontal_close(self.image_bin, lenght, verbose=self.verbose)
         self.topology.calculate(self.image_bin)
 
-    def save_element(self, element, name):
+    def save_image(self, element, name):
         cv2.imwrite(os.path.join(self.path, name), element)
 
     def cutter(self):
@@ -68,11 +68,11 @@ class CVUtil:
             down_right = (component.maxH, component.maxV)
             up_left = (component.minH, component.minV)
             element = crop(up_left, down_right, self.image_color)
-            self.save_element(element, "img"+str(contador)+".png")
+            self.save_image(element, "img"+str(contador)+".png")
             contador += 1
         if self.verbose:
             for component in self.topology.get_components(self.height_char):
                 down_right = (component.maxH, component.maxV)
                 up_left = (component.minH, component.minV)
-                cv2.rectangle(self.image_color, down_right, up_left, (0, 190, 0), 2)
+                cv2.rectangle(self.image_color, down_right, up_left, (0, 0, 100), 3)
             pop_up(self.image_color)

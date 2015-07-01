@@ -1,7 +1,7 @@
 # coding=utf-8
 __author__ = 'andre'
 
-from .set import Set
+from set import Set
 import numpy as np
 
 class Topology:

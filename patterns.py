@@ -6,6 +6,7 @@ from os.path import isfile, join, splitext
 import argparse
 import re
 
+
 def validator(validador, name, content):
     if validador:
         print content

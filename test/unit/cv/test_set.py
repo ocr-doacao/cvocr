@@ -6,8 +6,8 @@ from random import randint
 import sys
 import os
 local = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(local, "..", "..", ".."))
-from cv.set import Set
+sys.path.insert(0, os.path.join(local, "..", "..", "..", "cv"))
+from set import Set
 
 class TestSet(unittest.TestCase):
     def auto_create(self, set_list):
