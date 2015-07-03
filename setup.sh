@@ -17,6 +17,8 @@ sudo apt-get -qy install libopencv-dev build-essential checkinstall cmake pkg-co
  libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev x264 v4l-utils \
  ffmpeg
 
+sudo cp ocr.traineddata /usr/share/tesseract-ocr/tessdata/
+
 version="$(wget -q -O - http://sourceforge.net/projects/opencvlibrary/files/opencv-unix | egrep -m1 -o '\"[0-9](\.[0-9])+' | cut -c2-)"
 sudo mkdir -p /tmp/OpenCV
 cd /tmp/OpenCV
@@ -31,5 +33,4 @@ make -j2
 sudo make install
 sudo ldconfig
 
-sudo cp ocr.traineddata /usr/share/tesseract-ocr/tessdata/
-sudo pip install requirements.txt
+sudo pip install -r requirements.txt
