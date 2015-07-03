@@ -12,6 +12,11 @@ Algoritmo de fragmentação de imagem: python cv.py --help
  
 Rodar ocr para todas as imagens de uma pasta: python ocr.py --help
 
+Descobrir padrões nos resultados: python patterns.py --help
+
+Rodar TUDO de uma única vez passando uma imagem e um diretório: python cvocr.py --help
+
+
 Instalação
 ========
 
@@ -45,3 +50,8 @@ Links úteis:
 Referências extras:
 
 [Treinamento](http://www.win.tue.nl/~aeb/linux/ocr/tesseract.html)
+
+Observações
+========
+
+O comando que roda todos os módulos de uma única vez apaga todos os arquivos do diretório!

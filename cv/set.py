@@ -29,12 +29,12 @@ class Set:
         elif point[1] < self.minH:
             self.minH = point[1]
             
-    def move(self, lst):
+    def move(self, destination):
         if len(self.elements) != 0:
-            while lst.parent != lst:
-                lst = lst.parent
-            self.parent = lst
-            lst.elements = lst.elements | self.elements
+            while destination.parent != destination:
+                destination = destination.parent
+            self.parent = destination
+            destination.elements = destination.elements | self.elements
             self.elements = set()
             if self.parent.maxV < self.maxV:
                 self.parent.maxV = self.maxV
