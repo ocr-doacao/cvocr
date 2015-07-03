@@ -32,3 +32,4 @@ sudo make install
 sudo ldconfig
 
 sudo cp ocr.traineddata /usr/share/tesseract-ocr/tessdata/
+sudo pip install requirements.txt
