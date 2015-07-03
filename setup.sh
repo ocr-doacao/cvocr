@@ -31,6 +31,8 @@ make -j2
 sudo make install
 sudo ldconfig
 
-popd 3
+popd
+popd
+popd
 sudo pip install -r requirements.txt
 sudo cp ocr.traineddata /usr/share/tesseract-ocr/tessdata/
