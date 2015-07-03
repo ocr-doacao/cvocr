@@ -18,7 +18,7 @@ Rodar TUDO de uma única vez passando uma imagem e um diretório: python cvocr.p
 
 Instalação
 ========
-Para instalar rode o comando:
+Para instalar rode o comando, será necessário digitar a senha de root:
 
 source setup.sh
 
