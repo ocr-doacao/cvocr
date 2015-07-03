@@ -16,8 +16,13 @@ Descobrir padrões nos resultados: python patterns.py --help
 
 Rodar TUDO de uma única vez passando uma imagem e um diretório: python cvocr.py --help
 
-
 Instalação
+========
+Para instalar rode o comando:
+
+source setup.sh
+
+Instalação Manual
 ========
 
 É necessário instalar as dependências de python (requirements.txt) e de sistema (requirements.system)

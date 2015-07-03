@@ -8,6 +8,7 @@ import os
 local = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(local, "..", "..", "..", "ocr"))
 from functions import call_tesseract
+from os import devnull
 
 
 class TestOcr(unittest.TestCase):
