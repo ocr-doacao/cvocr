@@ -1,5 +1,7 @@
 from subprocess import call
-import os
+from os import devnull
+
 
 def call_tesseract(filename, ext):
-    call(["tesseract", "-l", "por", "-psm", "8", filename + ext, filename], stdout=open(os.devnull, 'wb'), stderr=open(os.devnull, 'wb'))
+    call(["tesseract", "-l", "ocr", "-psm", "8", filename + ext, filename], stdout=open(devnull, 'wb'),
+         stderr=open(devnull, 'wb'))
