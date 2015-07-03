@@ -20,14 +20,14 @@ sudo apt-get -qy install libopencv-dev build-essential checkinstall cmake pkg-co
 version="$(wget -q -O - http://sourceforge.net/projects/opencvlibrary/files/opencv-unix | egrep -m1 -o '\"[0-9](\.[0-9])+' | cut -c2-)"
 sudo mkdir -p /tmp/OpenCV
 pushd /tmp/OpenCV
-wget -O opencv.zip http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/"$version"/opencv-"$version".zip
-unzip opencv.zip
+sudo wget -O opencv.zip http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/"$version"/opencv-"$version".zip
+sudo unzip opencv.zip
 pushd opencv-"$version"
-mkdir -p build
+sudo mkdir -p build
 pushd build
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON \
+sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON \
  -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
-make -j2
+sudo make -j2
 sudo make install
 sudo ldconfig
 
